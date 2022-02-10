@@ -1,0 +1,14 @@
+.form {
+    margin:auto;
+}
+
+.form__fieldset {
+    max-width: 150px;
+    border-radius: 10px;
+    background-color: #ccc;
+    align-items: center;
+}
+
+.form__span{
+    margin: 25px;
+}
