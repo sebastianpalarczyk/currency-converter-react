@@ -22,7 +22,7 @@
 
 @media(max-width: 767px){
     .form__label{
-        grid-template-columns: 150px;
+        grid-template-columns: 175px;
         font-size: 18px;
     }
 }
