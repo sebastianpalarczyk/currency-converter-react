@@ -12,3 +12,21 @@
 .form__span{
     margin: 25px;
 }
+
+.form__label{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin:40px;
+}
+
+
+@media(max-width: 767px){
+    .form__label{
+        grid-template-columns: 150px;
+        font-size: 18px;
+    }
+}
+
+.form__label--center{
+    text-align: center;
+}

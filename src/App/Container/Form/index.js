@@ -18,7 +18,7 @@ const Form = ({ calculateResult, result }) => {
         <form className="form" onSubmit={onFormSubmit}>
             <fieldset className="form__fieldset">
                 <legend>Currency converter</legend>
-                <label>
+                <label className="form__label">
                     Kwota do przeliczenia:
                     <input
                         required
@@ -29,27 +29,30 @@ const Form = ({ calculateResult, result }) => {
                         onChange={({ target }) => setAmount(target.value)}
                     />
                 </label>
-                <p>
-                    <label>
-                        <select
-                            value={currency}
-                            onChange={({ target }) => setCurrency(target.value)}
-                        >
-                            {currencies.map((currency => (
-                                <option
-                                    key={currency.short}
-                                    value={currency.short}
-                                >
-                                    {currency.name}
-                                </option>
-                            )))}
-                        </select>
-                    </label>
-                </p>
-                <p className="paragraph">
-                    <button>Przelicz</button>
-                </p>
-                <Result result={result} />
+                <label className="form__label">
+                    <select
+                        value={currency}
+                        onChange={({ target }) => setCurrency(target.value)}
+                    >
+                        {currencies.map((currency => (
+                            <option
+                                key={currency.short}
+                                value={currency.short}
+                            >
+                                {currency.name}
+                            </option>
+                        )))}
+                    </select>
+                </label>
+                <label className="form__label form__label--center">
+                    Kursy walut pochodzą ze strony nbp.pl z dnia: 11.02.2022
+                </label>
+                <label className="form__label">
+                    <button className="form__button">Przelicz</button>
+                </label>
+                
+                    <Result result={result} />
+                
             </fieldset>
         </form>
     )

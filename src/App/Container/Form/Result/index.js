@@ -1,22 +1,18 @@
 import React from "react";
-import "./style.css";
 
-const Result = ({result}) => (
-    <p className="paragraph">
+
+const Result = ({ result }) => (
+    <label className="form__label form__label--center">
         {result !== undefined && (
             <>
-             {result.sourceAmount.toFixed(2)}&nbsp;PLN&nbsp;=
-             <strong>
-                 {result.targetAmount.toFixed(2)}&nbsp;{result.currency}
-             </strong>
-            
-            
+                <stron>
+                    {result.sourceAmount.toFixed(2)}&nbsp;PLN&nbsp;
+                    = {result.targetAmount.toFixed(2)}&nbsp;{result.currency}
+                </stron>
             </>
-        )
+        )}
 
-        }
-
-    </p>
+    </label>
 )
 
 export default Result;
