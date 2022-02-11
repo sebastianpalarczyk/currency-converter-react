@@ -6,7 +6,7 @@ html {
   box-sizing: inherit;
 }
 
-body {
+#root{
   font-family: 'Pushster', cursive;
   color: black;
   font-size: 30px;
