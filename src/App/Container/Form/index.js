@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./style.css";
 import { currencies } from "../../currencies";
 import Result from "./Result";
-import Time from "./Time";
+import Clock from "./Clock";
 
 
 const Form = ({ calculateResult, result }) => {
@@ -19,7 +19,7 @@ const Form = ({ calculateResult, result }) => {
         <form className="form" onSubmit={onFormSubmit}>
             <fieldset className="form__fieldset">
                 <legend>Currency converter</legend>
-                <Time/>
+                <Clock/>
                 <label className="form__label">
                     Kwota do przeliczenia:
                     <input
