@@ -1,5 +1,5 @@
 .form {
-    margin:auto;
+    margin: auto;
 }
 
 .form__fieldset {
@@ -9,24 +9,38 @@
     align-items: center;
 }
 
-.form__span{
+.form__span {
     margin: 25px;
 }
 
-.form__label{
+.form__label {
     display: grid;
     grid-template-columns: 1fr;
-    margin:40px;
+    margin: 40px;
 }
 
 
-@media(max-width: 767px){
-    .form__label{
+@media(max-width: 767px) {
+    .form__label {
         grid-template-columns: 175px;
         font-size: 18px;
+        margin: 20px;
     }
 }
 
-.form__label--center{
+.form__label--center {
     text-align: center;
+}
+
+.form__label--time {
+    font-size: 20px;
+    text-align: right;
+}
+
+@media(max-width: 767px) {
+    .form__label--time {
+        grid-template-columns: 175px;
+        font-size: 10px;
+        margin: 20px;
+    }
 }
