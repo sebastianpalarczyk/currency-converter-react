@@ -2,17 +2,16 @@ import React from "react";
 
 
 const Result = ({ result }) => (
-    <label className="form__label form__label--center">
+    <>
         {result !== undefined && (
             <>
-                <stron>
+                <strong>
                     {result.sourceAmount.toFixed(2)}&nbsp;PLN&nbsp;
                     = {result.targetAmount.toFixed(2)}&nbsp;{result.currency}
-                </stron>
+                </strong>
             </>
         )}
-
-    </label>
+    </>
 )
 
 export default Result;

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "./style.css";
 import { currencies } from "../../currencies";
 import Result from "./Result";
 import Clock from "./Clock";
+import { FormContainer, Fieldset, Label } from "./styled.js";
 
 
 const Form = ({ calculateResult, result }) => {
@@ -16,11 +16,13 @@ const Form = ({ calculateResult, result }) => {
 
 
     return (
-        <form className="form" onSubmit={onFormSubmit}>
-            <fieldset className="form__fieldset">
+        <FormContainer onSubmit={onFormSubmit}>
+            <Fieldset>
                 <legend>Currency converter</legend>
-                <Clock/>
-                <label className="form__label">
+                <Label clock>
+                    <Clock/>
+                </Label>
+                <Label>
                     Kwota do przeliczenia:
                     <input
                         required
@@ -30,8 +32,8 @@ const Form = ({ calculateResult, result }) => {
                         value={amount}
                         onChange={({ target }) => setAmount(target.value)}
                     />
-                </label>
-                <label className="form__label">
+                </Label>
+                <Label>
                     <select
                         value={currency}
                         onChange={({ target }) => setCurrency(target.value)}
@@ -45,18 +47,18 @@ const Form = ({ calculateResult, result }) => {
                             </option>
                         )))}
                     </select>
-                </label>
-                <label className="form__label form__label--center">
+                </Label>
+                <Label center>
                     Kursy walut pochodzą ze strony nbp.pl z dnia: 11.02.2022
-                </label>
-                <label className="form__label">
-                    <button className="form__button">Przelicz</button>
-                </label>
-                
+                </Label>
+                <Label>
+                    <button>Przelicz</button>
+                </Label>
+                <Label>
                     <Result result={result} />
-                
-            </fieldset>
-        </form>
+                </Label>
+            </Fieldset>
+        </FormContainer>
     )
 };
 

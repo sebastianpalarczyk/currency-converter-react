@@ -23,9 +23,9 @@ const Clock = () => {
     }, []);
 
     return (
-        <label className="form__label form__label--time">
-            Dzisiaj jest{" "} {formaDate(date)}
-        </label>
+        <>
+        Dzisiaj jest{" "} {formaDate(date)}
+        </>
     )
 }
 
