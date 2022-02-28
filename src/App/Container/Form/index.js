@@ -32,7 +32,7 @@ const Form = () => {
     return (
         <FormContainer onSubmit={onFormSubmit}>
             <Fieldset>
-                <legend>Currency converter</legend>
+                <legend>Kalkulator walut</legend>
                 <Label clock>
                     <Clock />
                 </Label>
